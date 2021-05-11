@@ -1,29 +1,30 @@
 #!/bin/bash -x
+m=$1
+d=$2
+y=$3
+echo month is $m and day is $d and year is $y
 
-month=`date +%d-%m-%y | awk -F '-' '{print $2}'`
-echo $month
-day=`date +%d-%m-%y | awk -F '-' '{print $1}'`
-echo $day
-
-if [[ ( $month -ge 3 ) && ( $month -le 6 ) ]]
+if [[ $m -ge 3 && $m -le 6 ]]
 then
-	if [ $month -eq 3 ]
+	if [ $m -eq 3 ]
 	then
-		if [ $day -gt 20 ]
+		if [ $d -gt 20 ]
 		then
 			echo true
 		else 
 			echo false
 		fi
 	fi
-	if [ $month -eq 6 ]
+	if [ $m -eq 6 ]
 	then
-		if [ $day -le 20 ]
+		if [ $d -le 20 ]
 		then
 			echo true
 		else
 			echo false
 		fi
 	fi
+else
+	echo false
 fi
 
