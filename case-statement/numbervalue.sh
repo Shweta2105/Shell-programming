@@ -1,21 +1,21 @@
-#!/bin/bash
+#!/bin/bash -x
 
 echo -n "Enter the number :"
 read num
 case $num in
-			[ 1-9 ] )
+			1)
 			echo -n "Unit"
 			;;
-			[ 10-99 ] )
+			10)
 			echo -n "Tens"
 			;;
-			[ 100-999 ] )
+			100)
 			echo -n "Hundreds"
 			;;
-			[ 1000-9999 ] )
+			1000)
 			echo -n "Thousands"
 			;;
-			[ 10000 -99999 ] )
+			10000)
 			echo -n "Ten Thousands"
 			;;
 			*)
